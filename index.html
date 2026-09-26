@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Летящий самолётик для Максима ✈️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+  <canvas id="game" width="480" height="720"></canvas>
+  
+  <div id="hud" style="display:none;">
+    <div>Уровень: <span id="levelDisplay">1</span>/5</div>
+    <div>⭐ <span id="scoreDisplay">0</span></div>
+  </div>
+  
+  <div class="progress-bar" id="progressBar" style="display:none;">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+  
+  <!-- Экран старта -->
+  <div class="screen active" id="start-screen">
+    <div class="emoji-big">✈️</div>
+    <h1>Привет, <span class="name-highlight">Максим</span>!</h1>
+    <p>Помоги самолётику пролететь<br>через <strong>5 уровней</strong> — тебя ждёт<br>сюрприз-поздравление! 🎂</p>
+    <p style="font-size: 0.95em; opacity: 0.85;">
+      🖱️ Клик или <strong>ПРОБЕЛ</strong> — самолётик летит вверх
+    </p>
+    <button class="btn" id="btn-start">Начать полёт 🚀</button>
+  </div>
+  
+  <!-- Экран Game Over -->
+  <div class="screen" id="gameover-screen">
+    <div class="emoji-big">💥</div>
+    <h2>Ой, <span class="name-highlight">Максим</span>, самолётик упал!</h2>
+    <p>Уровень: <strong id="goLevel">1</strong></p>
+    <p>Очков набрано: <strong id="goScore">0</strong></p>
+    <p style="font-size: 0.95em; opacity: 0.85;">Не сдавайся, попробуй ещё раз! 💪</p>
+    <button class="btn" id="btn-retry">Попробовать снова 🔄</button>
+  </div>
+  
+  <!-- Финальный экран -->
+  <div class="screen" id="final-screen">
+    <div class="emoji-big">🎂</div>
+    <h1>С Днём Рождения,<br><span class="name-highlight">Максим</span>!</h1>
+    <p style="font-size: 1.15em;">Ты справился со всеми 5 уровнями! 🏆</p>
+    
+    <div class="wish">💖 Пусть каждый день приносит тебе радость и улыбки</div>
+    <div class="wish">🌟 Пусть мечты сбываются легко и красиво</div>
+    <div class="wish">🚀 Пусть удача летит рядом, как этот самолётик</div>
+    <div class="wish">🍀 Пусть здоровье будет крепким, а друзья — верными</div>
+    
+    <p style="margin-top: 20px; font-size: 1.05em;">
+      🎉 <span class="name-highlight">Максим</span>, ты — удивительный человек! 🎉<br>
+      Счастья, вдохновения и море приключений!
+    </p>
+    
+    <button class="btn" id="btn-restart">Играть снова 🎮</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
